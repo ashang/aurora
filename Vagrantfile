@@ -26,6 +26,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # See build-support/packer/README.md for instructions on updating this box.
   config.vm.box = "apache-aurora/dev-environment"
   config.vm.box_version = "0.0.12"
+  config.vm.box_url = "http://dev/box/apache-aurora-dev-environment-0.0.12.box"
 
   config.vm.define "devcluster" do |dev|
     dev.vm.network :private_network, ip: "192.168.33.7", :auto_config => false
